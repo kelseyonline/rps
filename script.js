@@ -42,6 +42,7 @@ function game() {
     playRound(playerSelection, computerSelection);
     if (winner === 'player'){
         playerScore = playerScore + 1;
+        document.getElementById('score').innerText = playerScore;
         console.log("The player's score is " + playerScore);
         console.log("The computer's score is " + computerScore);
     }
@@ -53,6 +54,15 @@ function game() {
     else {
         console.log("The player's score is " + playerScore);
         console.log("The computer's score is " + computerScore);
+    }
+
+    if (playerScore === 5){
+        console.log('Player wins!');
+        document.getElementById('winner').innerText = 'Player wins!';
+    }
+    else if (computerScore === 5){
+        console.log('Computer wins!');
+        document.getElementById('winner').innerText = 'Computer wins!';
     }
 }
 
@@ -71,10 +81,3 @@ document.getElementById('scissors-button').addEventListener('click', function() 
     console.log('playerSelection is scissors');
     game();
 });
-
-if (playerScore === 5){
-    console.log('Player wins!');
-}
-else if (computerScore === 5){
-    console.log('Computer wins!');
-}
