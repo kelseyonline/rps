@@ -1,12 +1,12 @@
+let winner;
+
 function getComputerChoice(){
     const tools = ['rock','paper','scissors'];
     const randomIndex = Math.floor(Math.random() * tools.length);
     computerSelection = tools[randomIndex];
-    console.log(computerSelection);
+    console.log('computerSelection is ' + computerSelection);
     return computerSelection;
-};
-
-let winner;
+};   
 
 function playRound(playerSelection, computerSelection) { 
     if ((playerSelection === 'rock' && computerSelection === 'scissors') ||
@@ -37,8 +37,7 @@ var computerScore = 0;
 
 function game() {
     var computerSelection = getComputerChoice();
-    var playerSelection = prompt('Please select your weapon: rock, paper, or scissors?');
-    console.log(playerSelection);
+    // Sandbox for onclick
 
     playRound(playerSelection, computerSelection);
     if (winner === 'player'){
@@ -57,9 +56,21 @@ function game() {
     }
 }
 
-while (playerScore != 5 && computerScore != 5){
+document.getElementById('rock-button').addEventListener('click', function() {
+    playerSelection = 'rock';
+    console.log('playerSelection is rock');
     game();
-}
+});
+document.getElementById('paper-button').addEventListener('click', function() {
+    playerSelection = 'paper';
+    console.log('playerSelection is paper');
+    game();
+});
+document.getElementById('scissors-button').addEventListener('click', function() {
+    playerSelection = 'scissors';
+    console.log('playerSelection is scissors');
+    game();
+});
 
 if (playerScore === 5){
     console.log('Player wins!');
