@@ -1,11 +1,20 @@
 * { 
     font-family: sans-serif;
-    background-color: black;
     color: white;
+}
+
+html {
+    background-image: url('static/minecraft.jpg');
+    height: 100%;
+    background-size: cover;
 }
 
 #hero { 
     text-align: center;
+    font-size: 80px;
+    color: rgba(255, 255, 255, 0.5);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
 }
 
 .tool-options { 
@@ -26,6 +35,9 @@ figcaption {
 
 .tool-button { 
     border: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
     border-radius: 16px;
     font-size: 30px;
     padding: 18px;
@@ -35,6 +47,11 @@ figcaption {
     color: darkseagreen;
     text-align: center;
     margin: 30px;
+}
+
+#score { 
+    color: goldenrod;
+    font-size: 40px;
 }
 
 .winnerboard { 

@@ -13,21 +13,21 @@ function playRound(playerSelection, computerSelection) {
     (playerSelection === 'paper' && computerSelection === 'rock') ||
     (playerSelection === 'scissors' && computerSelection === 'paper')){
         winner = 'player';
-        console.log(resultMessage = 'You win, ' + playerSelection + ' beats ' + computerSelection + '!');
+        alert('You win, ' + playerSelection + ' beats ' + computerSelection + '!');
         return winner; 
     }
     else if ((computerSelection === 'rock' && playerSelection === 'scissors') ||
     (computerSelection === 'paper' && playerSelection === 'rock') ||
     (computerSelection === 'scissors' && playerSelection === 'paper')){
         winner = 'computer';
-        console.log('You lose, ' + computerSelection + ' beats ' + playerSelection + '!');
+        alert('You lose, ' + computerSelection + ' beats ' + playerSelection + '!');
         return winner;
     }
     else if ((playerSelection === 'rock' && computerSelection === 'rock') ||
     (playerSelection === 'paper' && computerSelection === 'paper') ||
     (playerSelection === 'scissors' && computerSelection === 'scissors')){
         winner = 'tie';
-        console.log("It's a tie!");
+        alert("It's a tie!");
         return winner;
     }
 }
