@@ -1,0 +1,44 @@
+* { 
+    font-family: sans-serif;
+    background-color: black;
+    color: white;
+}
+
+#hero { 
+    text-align: center;
+}
+
+.tool-options { 
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+
+img {
+    width: 150px;
+    height: auto;
+    padding: 10px;
+}
+
+figcaption { 
+    text-align: center;
+}
+
+.tool-button { 
+    border: 1px solid white;
+    border-radius: 16px;
+    font-size: 30px;
+    padding: 18px;
+}
+
+.scoreboard { 
+    color: darkseagreen;
+    text-align: center;
+    margin: 30px;
+}
+
+.winnerboard { 
+    color: darksalmon;
+    text-align: center; 
+    margin: 30px;
+}
